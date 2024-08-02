@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container">
+        <form id="contactForm" method="POST">
+            <h1>Contact Us</h1>
+            
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="4" required minlength="100"></textarea>
+            
+            <button type="submit">Submit</button>
+            <p id="formFeedback" class="feedback"></p>
+        </form>
+    </div>
 
+    <script src="scripts.js"></script>
 </body>
-
 </html>
